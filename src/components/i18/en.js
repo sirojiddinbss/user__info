@@ -11,6 +11,7 @@ export const en = {
         woman: 'woman',
         yes: 'Yes',
         no: 'No',
+        sex: 'Sex',
         birth_date: "B.date",
         age_filter: "Age filter"
 

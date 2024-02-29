@@ -4,16 +4,12 @@
     <div class="table__input">
       <el-form class="form__list" ref="documentForm" :model="documentData" :rules="rules">
         <div>
-          <el-button @click="changeLang('en')"> ENG </el-button>
-          <el-button @click="changeLang('uz')"> UZB </el-button>
+          <el-button @click="changeLang('en')" size="small" type="text"> ENG </el-button>
+          <el-button @click="changeLang('uz')" size="small" type="text"> UZB </el-button>
         </div>
         <div class="for__flex">
           <el-form-item prop="name">
-            <el-input
-              v-model="documentData.name"
-              :placeholder="$t('form.name')"
-              class="input"
-            />
+            <el-input v-model="documentData.name" :placeholder="$t('form.name')" class="input" />
           </el-form-item>
 
           <el-form-item prop="date" class="data__picker">
@@ -116,13 +112,13 @@
             </template>
           </el-table-column>
           <el-table-column :label="$t('form.birth_date')" prop="date" width="100" />
-          <el-table-column :label="$t('table_age')" width="110">
+          <el-table-column :label="$t('form.age_filter')" width="110">
             <template #default="prop">
               <div>{{ age_filter(prop.row.age) }}a</div>
             </template>
           </el-table-column>
 
-          <el-table-column :label="$t('form.age_filter')" width="60">
+          <el-table-column :label="$t('form.sex')" width="60">
             <template #default="prop">
               <div>
                 {{ sex_filter(prop.row.sex) }}
@@ -163,28 +159,26 @@ import { choisesReg, choisesDistrict } from '@/stores/choisesRegion'
 const dialog_store = dialogStore()
 const { dialogVisible } = storeToRefs(dialog_store)
 import { ElMessage } from 'element-plus'
-import cookies from 'vue-cookies' 
+import cookies from 'vue-cookies'
 
 import { useI18n } from 'vue-i18n'
 
-const {  locale } = useI18n()
+const { locale } = useI18n()
 const l = ref('')
 
-
-
-const changeLang = val =>{
+const changeLang = (val) => {
   cookies.set('lang', val)
   locale.value = val
   l.value = val
 }
-watch(locale, ()=>{
-  console.log(locale.value);
+watch(locale, () => {
+  console.log(locale.value)
 })
 
-onMounted(()=>{
-  if(cookies.isKey('lang')){
+onMounted(() => {
+  if (cookies.isKey('lang')) {
     changeLang(cookies.get('lang'))
-  }else {
+  } else {
     l.value = locale.value
   }
 })
@@ -268,7 +262,6 @@ const save = () => {
     }
   })
 }
-
 
 const deleted = (val) => {
   users.value = [...users.value.filter((sec) => sec.index != val)]

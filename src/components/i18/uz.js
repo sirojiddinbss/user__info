@@ -11,6 +11,7 @@ export const uz = {
     woman: 'Ayol',
     yes: 'Xa',
     no: 'Yo`q',
+    sex: 'Jinsi',
     birth_date: "T.sana",
     age_filter: "Yosh filteri"
   }
