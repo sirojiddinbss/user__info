@@ -1,0 +1,122 @@
+.table__input {
+  display: flex;
+  width: 1500px;
+  justify-content: space-between;
+  .for__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .data__picker {
+    width: 160px;
+  }
+}
+.table__list {
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  transition: all 0.6s;
+  border-radius: 5px;
+  .el-table__cell {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  margin: 0 0 0 30px;
+}
+.form__list {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  padding: 20px;
+  transition: all 0.6s;
+  width: 40%;
+}
+
+.table__list:hover {
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 10px;
+}
+.form__list:hover {
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 10px;
+}
+.buttons {
+  width: 100%;
+  background-color: rgb(20, 180, 6);
+  border: none;
+}
+
+.style__sex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.asterisk-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.el-form-item {
+  .el-select {
+    width: 200px;
+  }
+  .is-bordered {
+    border: none;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.example {
+  width: 100%;
+}
+#app {
+  max-width: 1580px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+body {
+  background-image: url('@/assets/img/back.jpg');
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
